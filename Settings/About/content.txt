@@ -61,10 +61,6 @@ ORG: AKC
 LABEL: CERTIFICATION
 LINK: Settings/About/Certs/Cert1.pdf
 
-ORG: BBB
-LABEL: CERTIFICATION
-LINK: https://www.bbb.org/us/az/phoenix/profile/dog-breeders/desert-dobermans-llc-1126-1000143793/
-
 ORG: AKC
 LABEL: CERTIFICATION
 LINK: Settings/About/Certs/Cert2.pdf
