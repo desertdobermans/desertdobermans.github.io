@@ -12,12 +12,14 @@
   HOW TO ADD PUPPY PHOTOS:
   - Drop image files (.png, .jpg, .jpeg, .webp, etc.) into the
     matching folder inside Settings/Litters/.
-  - Name them by number: 1.png, 2.jpg, 3.webp, etc.
-  - Images are detected automatically from the folder — no
-    count or filename list needed.
+  - After adding/removing photos, update Settings/Litters/images.json
+    for that litter folder (add/remove the exact filename).
+  - Keep filenames exactly as they appear in the folder
+    (including uppercase/lowercase).
   - To remove a puppy, just delete its image file.
   - To add a new litter, create a new folder and add a
-    [LITTER: / FOLDER:] pair below.
+    [LITTER: / FOLDER:] pair below, then add that folder to
+    Settings/Litters/images.json.
 
 ============================================================
 

@@ -37,43 +37,21 @@
     return litters;
   }
 
-  /* Fetch the directory listing and extract image filenames. */
-  async function getImageFiles(folder) {
-    const dirUrl = 'Settings/Litters/' + folder + '/';
-    const r = await fetch(dirUrl);
-    if (!r.ok) return [];
-    const html = await r.text();
-    const imgExts = /\.(png|jpe?g|webp|avif|gif)$/i;
-    const matches = [];
-    /* Parse href="filename" from the directory listing HTML */
-    const re = /href="([^"]+)"/g;
-    let m;
-    while ((m = re.exec(html)) !== null) {
-      const name = decodeURIComponent(m[1]);
-      if (imgExts.test(name)) matches.push(dirUrl + name);
-    }
-    /* Sort numerically by leading number in filename */
-    matches.sort((a, b) => {
-      const na = parseInt(a.match(/\/(\d+)\./)?.[1]) || 0;
-      const nb = parseInt(b.match(/\/(\d+)\./)?.[1]) || 0;
-      return na - nb;
-    });
-    return matches;
+  async function loadImageManifest() {
+    const r = await fetch('Settings/Litters/images.json');
+    if (!r.ok) throw new Error(r.status);
+    return r.json();
   }
 
-  async function renderLitters(litters) {
+  async function renderLitters(litters, imageManifest) {
     const c = document.getElementById('littersContent');
     const frag = document.createDocumentFragment();
 
-    /* Load file lists one litter at a time */
-    const allImages = [];
-    for (const lit of litters) {
-      allImages.push(await getImageFiles(lit.folder));
-    }
-
     for (let li = 0; li < litters.length; li++) {
       const lit = litters[li];
-      const imgs = allImages[li];
+      const imgs = (imageManifest[lit.folder] || []).map(name =>
+        'Settings/Litters/' + lit.folder + '/' + encodeURIComponent(name)
+      );
       const sec = document.createElement('div'); sec.className = 'litter';
       const h = document.createElement('h2'); h.className = 'litter__title'; h.textContent = lit.title;
       sec.appendChild(h);
@@ -98,14 +76,16 @@
     c.appendChild(frag);
   }
 
-  fetch('Settings/Litters/litters.txt')
-    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
-    .then(t => renderLitters(parseLitters(t)))
+  Promise.all([
+    fetch('Settings/Litters/litters.txt')
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); }),
+    loadImageManifest()
+  ])
+    .then(([litterText, imageManifest]) => renderLitters(parseLitters(litterText), imageManifest))
     .catch(() => {
       document.getElementById('littersContent').innerHTML =
-        '<p class="litter__fallback">To view litters, please open this page through a local web server ' +
-        '(e.g. run <strong>python3 -m http.server</strong> in this folder and visit ' +
-        '<strong>localhost:8000/litters.html</strong>).</p>';
+        '<p class="litter__fallback">We couldn\'t load litter photos right now. Please verify ' +
+        '<strong>Settings/Litters/images.json</strong> is present in the published site.</p>';
     })
     .finally(() => pageReady());
 </script>
