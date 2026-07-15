@@ -87,10 +87,22 @@
     c.appendChild(frag);
   };
 
-  /** Bind a FormSubmit.co form to show a success message on submit. */
-  window.handleFormSubmit = (formId, successId) => {
+  /** Web3Forms access keys, loaded once per settings file and cached. */
+  const _accessKeyPromises = {};
+  const _loadAccessKey = path =>
+    (_accessKeyPromises[path] = _accessKeyPromises[path] ||
+      fetchSettings(path).then(d => d['FORM ACCESS KEY'] || '').catch(() => ''));
+
+  /** Bind a Web3Forms form to show a success message on submit.
+   *  settingsPath is the file holding this form's FORM ACCESS KEY. */
+  window.handleFormSubmit = (formId, successId, settingsPath) => {
     const form = document.getElementById(formId);
     if (!form) return;
+    // Fill the form's access_key from its settings file.
+    _loadAccessKey(settingsPath || 'Settings/site.txt').then(key => {
+      const input = form.querySelector('input[name="access_key"]');
+      if (input && key) input.value = key;
+    });
     form.addEventListener('submit', e => {
       e.preventDefault();
       const btn = form.querySelector('[type="submit"]');

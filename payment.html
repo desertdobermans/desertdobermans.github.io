@@ -27,11 +27,11 @@
   <div class="reserve__inner">
     <h2 class="reserve__heading">Acknowledgment and Agreement</h2>
     <p class="terms__intro" id="paymentOutro" style="text-align:center; margin-bottom:32px;"></p>
-    <form class="reserve__form" id="paymentForm" action="https://formsubmit.co/ajax/29912006390f7348e9a309cdcae624c4" method="POST">
-      <input type="hidden" name="_subject" value="Payment Terms Acknowledgment — Desert Dobermans" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="text" name="_honey" style="display:none" />
+    <form class="reserve__form" id="paymentForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="" />
+      <input type="hidden" name="subject" value="Payment Terms Acknowledgment — Desert Dobermans" />
+      <input type="hidden" name="from_name" value="Desert Dobermans Website" />
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
       <div class="form__group">
         <label class="form__label" for="fullName">Name *</label>
         <input class="form__input" type="text" id="fullName" name="name" required autocomplete="name" />
@@ -62,7 +62,7 @@
         '<p class="terms__fallback">Unable to load payment terms. Please try again later.</p>';
     })
     .finally(() => pageReady());
-  handleFormSubmit('paymentForm', 'formSuccess');
+  handleFormSubmit('paymentForm', 'formSuccess', 'Settings/PaymentTerms/content.txt');
 </script>
 
 </body>

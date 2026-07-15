@@ -2,6 +2,10 @@
   DESERT DOBERMANS — Puppy Purchase Agreement
 ============================================================
 
+  FORM ACCESS KEY: 0ff35471-4e7c-4f08-98fa-2d77f45f35c7
+  # Web3Forms key for this form's email delivery. Get a free
+  # key at https://web3forms.com. Safe to be public.
+
   HOW TO EDIT THIS FILE:
   - TITLE:    The page heading shown at the top.
   - INTRO:    A paragraph shown below the title.

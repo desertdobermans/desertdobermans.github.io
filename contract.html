@@ -27,11 +27,11 @@
   <div class="reserve__inner">
     <h2 class="reserve__heading">Acknowledgment and Agreement</h2>
     <p class="terms__intro" id="contractOutro" style="text-align:center; margin-bottom:32px;"></p>
-    <form class="reserve__form" id="contractForm" action="https://formsubmit.co/contact@desertdobermans.com" method="POST">
-      <input type="hidden" name="_subject" value="Contract Acknowledgment — Desert Dobermans" />
-      <input type="hidden" name="_captcha" value="true" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="text" name="_honey" style="display:none" />
+    <form class="reserve__form" id="contractForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="" />
+      <input type="hidden" name="subject" value="Contract Acknowledgment — Desert Dobermans" />
+      <input type="hidden" name="from_name" value="Desert Dobermans Website" />
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
       <div class="form__group">
         <label class="form__label" for="fullName">Name *</label>
         <input class="form__input" type="text" id="fullName" name="name" required autocomplete="name" />
@@ -68,7 +68,7 @@
         '<strong>localhost:8000/contract.html</strong>).</p>';
     })
     .finally(() => pageReady());
-  handleFormSubmit('contractForm', 'formSuccess');
+  handleFormSubmit('contractForm', 'formSuccess', 'Settings/Contract/content.txt');
 </script>
 
 </body>

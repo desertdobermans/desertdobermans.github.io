@@ -2,6 +2,10 @@
   DESERT DOBERMANS — Reserve Page Content
 ============================================================
 
+  FORM ACCESS KEY: 2a1a96a8-f620-416b-a40c-a2c3af887373
+  # Web3Forms key for this form's email delivery. Get a free
+  # key at https://web3forms.com. Safe to be public.
+
   HOW TO EDIT THIS FILE:
   - Each setting starts with a label like:  HEADING:
   - Just change the text after the label.

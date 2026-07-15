@@ -1,0 +1,6 @@
+# Site-wide settings
+
+# Web3Forms access key — used by ALL forms (reserve, contract, payment, questionnaire).
+# Get a free key at https://web3forms.com (enter contact@desertdobermans.com and it's
+# emailed to you). Paste it below. This key is safe to be public.
+FORM ACCESS KEY: YOUR_ACCESS_KEY_HERE

@@ -54,11 +54,11 @@
 <section class="reserve" id="reserve">
   <div class="reserve__inner">
     <h2 class="reserve__heading">Desert Dobermans Puppy Application</h2>
-    <form class="reserve__form" id="reserveForm" action="https://formsubmit.co/ajax/29912006390f7348e9a309cdcae624c4" method="POST">
-      <input type="hidden" name="_subject" value="New Puppy Application — Desert Dobermans" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="text" name="_honey" style="display:none" />
+    <form class="reserve__form" id="reserveForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="" />
+      <input type="hidden" name="subject" value="New Puppy Application — Desert Dobermans" />
+      <input type="hidden" name="from_name" value="Desert Dobermans Website" />
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
       <div class="form__group">
         <label class="form__label" for="fullName">First &amp; Last Name *</label>
         <input class="form__input" type="text" id="fullName" name="name" required autocomplete="name" />
@@ -121,7 +121,7 @@
     if (d['TAKE HOME'])   el('priceTakeHome').textContent = d['TAKE HOME'];
     if (d['SLOTS'])       el('priceSlots').textContent = d['SLOTS'];
   }).catch(() => {}).finally(() => pageReady());
-  handleFormSubmit('reserveForm', 'formSuccess');
+  handleFormSubmit('reserveForm', 'formSuccess', 'Settings/Reserve/content.txt');
 </script>
 
 </body>
