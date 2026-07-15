@@ -120,13 +120,13 @@
   const nav = document.createElement('nav');
   nav.className = 'navbar'; nav.id = 'navbar';
   nav.innerHTML =
-    '<a href="index.html" class="navbar__logo"><img src="Settings/Logo.png" alt="Desert Dobermans" class="navbar__logo-img" width="120" height="40"></a>' +
+    '<a href="/" class="navbar__logo"><img src="Settings/Logo.png" alt="Desert Dobermans" class="navbar__logo-img" width="120" height="40"></a>' +
     '<ul class="navbar__links" id="navLinks">' +
-      '<li><a href="index.html">Home</a></li>' +
-      '<li><a href="reserve.html">Reserve</a></li>' +
-      '<li><a href="litters.html">Litters</a></li>' +
-      '<li><a href="about.html">About Us</a></li>' +
-      '<li><a href="faq.html">FAQ</a></li>' +
+      '<li><a href="/">Home</a></li>' +
+      '<li><a href="/reserve">Reserve</a></li>' +
+      '<li><a href="/litters">Litters</a></li>' +
+      '<li><a href="/about">About Us</a></li>' +
+      '<li><a href="/faq">FAQ</a></li>' +
     '</ul>' +
     '<button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>';
   document.body.prepend(nav);
