@@ -1,23 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
   <url>
-       <loc>https://desertdobermans.com/</loc>
-       <lastmod>2026-07-15T04:58:08+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
+    <loc>https://desertdobermans.com/</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0000</priority>
   </url>
   <url>
-       <loc>https://desertdobermans.com/reserve</loc>
-       <lastmod>2026-07-15T04:58:08+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://desertdobermans.com/litters</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9000</priority>
   </url>
   <url>
-       <loc>https://desertdobermans.com/about</loc>
-       <lastmod>2026-07-15T04:58:08+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://desertdobermans.com/reserve</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8000</priority>
+  </url>
+  <url>
+    <loc>https://desertdobermans.com/about</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8000</priority>
+  </url>
+  <url>
+    <loc>https://desertdobermans.com/faq</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7000</priority>
+  </url>
+  <url>
+    <loc>https://desertdobermans.com/questionaire</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7000</priority>
+  </url>
+  <url>
+    <loc>https://desertdobermans.com/contract</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6000</priority>
+  </url>
+  <url>
+    <loc>https://desertdobermans.com/payment</loc>
+    <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6000</priority>
   </url>
 </urlset>
