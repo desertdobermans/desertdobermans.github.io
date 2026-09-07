@@ -40,11 +40,11 @@ OUTRO: We prioritize the health, happiness, and well-being of our puppies. Conta
 
 # ---------- PRICING & AVAILABILITY ----------
 
-PRICE TEXT: The cost for each puppy is $2500. A $400 non-refundable deposit is required, which is applied to the final price. Accepted payments are Cash, Zelle and Card.
+PRICE TEXT: The cost for each puppy is $2800. A $400 non-refundable deposit is required, which is applied to the final price. Accepted payments are Cash, Zelle and Card.
 
 PRICE NOTE: *Note: Deposits are non-refundable to ensure commitment to the adoption process. Please review all terms and documentation provided carefully.
 
-DOB: October 2026
+DOB: October 2027
 
 TAKE HOME: November 2026
 
