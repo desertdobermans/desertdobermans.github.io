@@ -17,7 +17,7 @@
 # ---------- HERO SECTION ----------
 # This is the big banner area at the top of the page.
 
-HERO TITLE: Reserve Now for November 2026 Litter
+HERO TITLE: Reserve Now for December 2027 Litter
 
 HERO BUTTON TEXT: Reserve
 
